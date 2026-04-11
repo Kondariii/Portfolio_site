@@ -1,0 +1,42 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Node (if you add build tools later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build output (if you add build tools later)
+dist/
+build/
+
+# Local server files
+.vercel
+.netlify
+
+# Large media files (optional - remove if you want to commit your content)
+# Uncomment the lines below if you don't want to commit actual photos/videos
+# photos/**/*.jpg
+# photos/**/*.jpeg
+# photos/**/*.png
+# photos/**/*.webp
+# videos/**/*.mp4
+# videos/**/*.mov
+# videos/**/*.webm

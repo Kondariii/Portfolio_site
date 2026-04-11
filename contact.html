@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Jakub Krzemiński</title>
+  <meta name="description" content="Get in touch for photography sessions, videography projects, or collaborations.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html { background: #0a0a0a; }
+  </style>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/themes.css">
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portfolio-theme');
+      const defaults = { theme: 'dark', palette: 'purple' };
+      const config = saved ? JSON.parse(saved) : defaults;
+      document.documentElement.className = `theme-${config.theme} palette-${config.palette}`;
+    })();
+  </script>
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo">Jakub Krzemiński</a>
+      <div class="navbar__links" role="menubar">
+        <a href="photography.html" class="navbar__link" role="menuitem">Photography</a>
+        <a href="videography.html" class="navbar__link" role="menuitem">Videography</a>
+        <a href="about.html" class="navbar__link" role="menuitem">About</a>
+        <a href="contact.html" class="navbar__link" role="menuitem">Contact</a>
+      </div>
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+    </div>
+    <div class="navbar__mobile-menu">
+      <a href="photography.html" class="navbar__mobile-link">Photography</a>
+      <a href="videography.html" class="navbar__mobile-link">Videography</a>
+      <a href="about.html" class="navbar__mobile-link">About</a>
+      <a href="contact.html" class="navbar__mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <main class="section" style="padding-top: 140px;">
+    <div class="container container-narrow">
+      <div class="contact-header fade-in">
+        <span class="contact-caption">Contact</span>
+        <h1 class="contact-title">Let's Work Together</h1>
+        <p class="contact-intro">I'm Jakub Krzemiński, a photographer based in Łódź, Poland. I'm passionate about capturing real moments and telling stories through images. Photography allows me to freeze emotions, atmosphere, and small details that often go unnoticed. I enjoy working with both photos and video, always looking for creative ways to improve my work. Whether it's events, portraits, or everyday scenes, my goal is to create images that feel natural and authentic.</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Contact Info -->
+        <div class="contact-info fade-in">
+          <div class="contact-block">
+            <div class="contact-block__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-block__content">
+              <h3 class="contact-block__title">Email</h3>
+              <a href="mailto:jakubkrzeminski08@gmail.com" class="contact-block__link">jakubkrzeminski08@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <div class="contact-block__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-block__content">
+              <h3 class="contact-block__title">Location</h3>
+              <p class="contact-block__text">Łódź, Poland<br>Available for travel worldwide</p>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <div class="contact-block__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="contact-block__content">
+              <h3 class="contact-block__title">Social</h3>
+              <div class="contact-social">
+                <a href="https://www.instagram.com/jacobekpii?igsh=MXUxOGM2MTZjMWFu" target="_blank" rel="noopener" class="contact-social__link">Instagram</a>
+                <a href="https://youtube.com" target="_blank" rel="noopener" class="contact-social__link">YouTube</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-social__link">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <div class="contact-block__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="contact-block__content">
+              <h3 class="contact-block__title">Phone</h3>
+              <p class="contact-block__text">Available upon request</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container fade-in">
+          <!--
+            FORMSPREE INTEGRATION:
+            To use Formspree for actual form submission:
+            1. Sign up at https://formspree.io
+            2. Replace the action URL below with your form endpoint
+            3. Remove the onsubmit attribute
+            Example: action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+          -->
+          <form
+            class="contact-form"
+            action="mailto:jakubkrzeminski08@gmail.com"
+            method="post"
+            enctype="text/plain"
+            onsubmit="event.preventDefault(); handleFormSubmit(this);"
+          >
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="Your name"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="your@email.com"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <select id="subject" name="subject" class="form-select">
+                <option value="">Select a topic...</option>
+                <option value="portrait">Portrait Session</option>
+                <option value="event">Event Coverage</option>
+                <option value="commercial">Commercial Project</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-textarea"
+                rows="6"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+
+          <div class="contact-note">
+            <p><small>Response time is typically within 24-48 hours. For urgent inquiries, please reach out via social media.</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copyright">&copy; 2026 Jakub Krzemiński. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/jacobekpii?igsh=MXUxOGM2MTZjMWFu" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            </svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48"></polygon>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 19V5M5 12l7-7 7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <div class="theme-panel">
+    <button class="theme-panel__toggle" aria-label="Open theme settings">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+      </svg>
+    </button>
+    <div class="theme-panel__backdrop"></div>
+    <div class="theme-panel__menu">
+      <header class="theme-panel__header">Appearance Settings</header>
+      <div class="theme-panel__mode">
+        <button class="theme-panel__mode-btn" data-mode="dark">
+          <svg class="theme-panel__mode-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          Dark
+        </button>
+        <button class="theme-panel__mode-btn" data-mode="light">
+          <svg class="theme-panel__mode-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          Light
+        </button>
+      </div>
+      <header class="theme-panel__header">Color Palette</header>
+      <div class="theme-panel__palettes">
+        <button class="theme-panel__palette-btn" data-palette="purple"><span class="theme-panel__palette-preview"></span><span class="theme-panel__palette-label">Purple</span></button>
+        <button class="theme-panel__palette-btn" data-palette="orange"><span class="theme-panel__palette-preview"></span><span class="theme-panel__palette-label">Orange</span></button>
+        <button class="theme-panel__palette-btn" data-palette="gray"><span class="theme-panel__palette-preview"></span><span class="theme-panel__palette-label">Gray</span></button>
+        <button class="theme-panel__palette-btn" data-palette="teal"><span class="theme-panel__palette-preview"></span><span class="theme-panel__palette-label">Teal</span></button>
+        <button class="theme-panel__palette-btn" data-palette="rose"><span class="theme-panel__palette-preview"></span><span class="theme-panel__palette-label">Rose</span></button>
+        <button class="theme-panel__palette-btn" data-palette="amber"><span class="theme-panel__palette-preview"></span><span class="theme-panel__palette-label">Amber</span></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/nav.js"></script>
+
+  <script>
+    // Form submission handler (mailto fallback)
+    function handleFormSubmit(form) {
+      const formData = new FormData(form);
+      const subject = encodeURIComponent('Project Inquiry: ' + (formData.get('subject') || 'General'));
+      const body = encodeURIComponent(
+        'Name: ' + formData.get('name') + '\n' +
+        'Email: ' + formData.get('email') + '\n\n' +
+        'Message:\n' + formData.get('message')
+      );
+
+      // Open mailto with prefilled data
+      window.location.href = `mailto:jakubkrzeminski08@gmail.com?subject=${subject}&body=${body}`;
+
+      // Show success message (even though mailto is handled by the OS)
+      const button = form.querySelector('button[type="submit"]');
+      const originalText = button.textContent;
+      button.textContent = 'Opening email client...';
+      button.disabled = true;
+
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.disabled = false;
+      }, 3000);
+    }
+  </script>
+
+  <style>
+    .contact-header { text-align: center; margin-bottom: 4rem; }
+    .contact-caption { font-family: var(--font-secondary); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-primary); }
+    .contact-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; margin-top: 0.5rem; }
+    .contact-intro { font-size: 1.125rem; color: var(--text-tertiary); max-width: 600px; margin: 1rem auto 0; }
+
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; }
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-block { display: flex; gap: 1rem; }
+    .contact-block__icon { width: 48px; height: 48px; border-radius: 12px; background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; color: var(--accent-primary); flex-shrink: 0; }
+    .contact-block__title { font-size: 0.875rem; font-family: var(--font-secondary); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .contact-block__link { color: var(--accent-primary); font-size: 1.0625rem; transition: color 0.3s; }
+    .contact-block__link:hover { text-decoration: underline; }
+    .contact-block__text { color: var(--text-tertiary); font-size: 1rem; line-height: 1.6; }
+    .contact-social { display: flex; gap: 1rem; }
+    .contact-social__link { color: var(--accent-primary); font-size: 0.9375rem; transition: color 0.3s; }
+    .contact-social__link:hover { text-decoration: underline; }
+
+    .contact-form-container { background: var(--bg-secondary); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-light); }
+    .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .form-label { font-family: var(--font-secondary); font-size: 0.8125rem; font-weight: 500; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; }
+    .form-input, .form-select, .form-textarea { padding: 1rem 1.25rem; border: 1px solid var(--border-medium); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); font-size: 1rem; transition: border-color 0.3s, box-shadow 0.3s; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--accent-primary); box-shadow: 0 0 0 3px rgba(var(--accent-primary-rgb), 0.1); }
+    .form-textarea { resize: vertical; min-height: 150px; font-family: inherit; }
+    .form-select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 3rem; }
+    .btn-full { width: 100%; }
+    .contact-note { margin-top: 1.5rem; text-align: center; color: var(--text-muted); }
+    .contact-note small { font-size: 0.875rem; }
+
+    .footer { padding: 3rem 0; border-top: 1px solid var(--border-light); background: var(--bg-secondary); margin-top: 4rem; }
+    .footer__content { display: flex; justify-content: space-between; align-items: center; }
+    .footer__copyright { color: var(--text-tertiary); font-size: 0.875rem; }
+    .footer__social { display: flex; gap: 1rem; }
+    .footer__social a { color: var(--text-tertiary); transition: color 0.3s; }
+    .footer__social a:hover { color: var(--accent-primary); }
+    .back-to-top { position: fixed; bottom: 100px; right: 2rem; width: 48px; height: 48px; border-radius: 50%; background: var(--bg-elevated); border: 1px solid var(--border-light); color: var(--text-primary); display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 100; }
+    .back-to-top--visible { opacity: 1; visibility: visible; }
+    .back-to-top:hover { background: var(--accent-primary); color: var(--accent-contrast); }
+
+    @media (max-width: 1024px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      .contact-form-container { padding: 1.5rem; }
+      .footer__content { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</body>
+</html>
