@@ -76,6 +76,7 @@
 
       // Prevent body scroll when menu is open
       document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+      document.body.classList.add("menu-open");
     }
 
     function closeMenu() {
