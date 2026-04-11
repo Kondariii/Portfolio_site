@@ -48,6 +48,17 @@
       document.documentElement.className = `theme-${config.theme} palette-${config.palette}`;
     })();
   </script>
+
+  <!-- Language init (must be early to prevent flash) -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portfolio-language');
+      const lang = saved || 'en';
+
+      // Apply language to html element immediately
+      document.documentElement.lang = lang;
+    })();
+  </script>
 </head>
 <body>
 
@@ -215,14 +226,25 @@
     <div class="theme-panel__backdrop"></div>
 
     <div class="theme-panel__menu">
-      <header class="theme-panel__header">Appearance Settings</header>
+      <header class="theme-panel__header" data-i18n="theme.appearance">Appearance Settings</header>
+
+      <div class="theme-panel__language">
+        <button class="language-btn" data-lang="en" aria-pressed="false">
+          <span class="language-btn__flag">🇬🇧</span>
+          <span data-i18n="language.en">English</span>
+        </button>
+        <button class="language-btn" data-lang="pl" aria-pressed="false">
+          <span class="language-btn__flag">🇵🇱</span>
+          <span data-i18n="language.pl">Polski</span>
+        </button>
+      </div>
 
       <div class="theme-panel__mode">
         <button class="theme-panel__mode-btn" data-mode="dark">
           <svg class="theme-panel__mode-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
-          Dark
+          <span data-i18n="theme.dark">Dark</span>
         </button>
         <button class="theme-panel__mode-btn" data-mode="light">
           <svg class="theme-panel__mode-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -236,11 +258,11 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          Light
+          <span data-i18n="theme.light">Light</span>
         </button>
       </div>
 
-      <header class="theme-panel__header">Color Palette</header>
+      <header class="theme-panel__header" data-i18n="theme.palette">Color Palette</header>
       <div class="theme-panel__palettes">
         <button class="theme-panel__palette-btn" data-palette="purple">
           <span class="theme-panel__palette-preview"></span>
@@ -272,6 +294,7 @@
 
   <!-- Scripts -->
   <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/lightbox.js"></script>

@@ -57,8 +57,14 @@
 
     const html = itemsToRender.map((photo, index) => {
       const title = photo.title || getFilenameFromPath(photo.src);
+      // Store all categories in data attribute as JSON for filtering
+      const categoriesAttr = JSON.stringify(photo.categories || []);
+      // Display categories joined by "/"
+      const categoriesDisplay = photo.categories ? photo.categories.join(' / ') : '';
+      // Use first category for CSS/data attribute
+      const primaryCategory = photo.categories && photo.categories.length > 0 ? photo.categories[0] : '';
       return `
-        <div class="gallery__item" data-category="${photo.category}" data-index="${index}">
+        <div class="gallery__item" data-category="${primaryCategory}" data-categories='${categoriesAttr}' data-index="${index}">
           <div class="gallery__image-wrapper">
             <img
               src="${photo.src}"
@@ -66,9 +72,10 @@
               class="gallery__image"
               loading="${index < 6 ? 'eager' : 'lazy'}"
               decoding="async"
+              draggable="false"
             >
             <div class="gallery__overlay">
-              <span class="gallery__category">${photo.category}</span>
+              <span class="gallery__category">${categoriesDisplay}</span>
               ${photo.title ? `<h3 class="gallery__title">${photo.title}</h3>` : ''}
             </div>
           </div>
@@ -85,11 +92,27 @@
     //detectImageOrientations(galleryItems);
 
     // Add click handlers for lightbox
-    galleryItems.forEach((item, index) => {
+    // Pass the actual photo object to ensure correct image opens when filtering
+    galleryItems.forEach((item) => {
+      const index = parseInt(item.dataset.index, 10);
+      const photo = itemsToRender[index];
       item.addEventListener('click', () => {
         if (window.Lightbox) {
-          window.Lightbox.open(index, currentFilter);
+          window.Lightbox.open(photo, currentFilter);
         }
+      });
+    });
+
+    // Prevent right-click and drag on gallery images
+    const galleryImages = gallery.querySelectorAll('.gallery__image');
+    galleryImages.forEach(img => {
+      img.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        return false;
+      });
+      img.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+        return false;
       });
     });
   }
@@ -198,8 +221,16 @@
    */
   function filterGallery(category) {
     galleryItems.forEach(item => {
-      const itemCategory = item.dataset.category;
-      const shouldShow = category === 'all' || itemCategory === category;
+      // Parse categories array from data attribute
+      let itemCategories = [];
+      try {
+        itemCategories = JSON.parse(item.dataset.categories || '[]');
+      } catch (e) {
+        // Fallback to single category for backward compatibility
+        itemCategories = [item.dataset.category];
+      }
+      // Check if photo has the selected category in its categories array
+      const shouldShow = category === 'all' || itemCategories.includes(category);
 
       if (shouldShow) {
         item.classList.remove('gallery__item--hidden');
@@ -246,7 +277,7 @@
    */
   function getFilteredPhotos(filter = 'all') {
     if (filter === 'all') return PHOTOS;
-    return PHOTOS.filter(p => p.category === filter);
+    return PHOTOS.filter(p => p.categories && p.categories.includes(filter));
   }
 
   /**

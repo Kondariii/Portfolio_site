@@ -116,6 +116,16 @@
   transform: scale(0.95);
   opacity: 0;
   transition: transform var(--transition-slow), opacity var(--transition-slow);
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
 }
 
 .lightbox--open .lightbox__image {

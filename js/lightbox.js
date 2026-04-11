@@ -123,21 +123,35 @@
     // Touch/swipe support
     lightbox.addEventListener('touchstart', handleTouchStart, { passive: true });
     lightbox.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    // Prevent right-click and drag on lightbox image
+    if (lightboxImage) {
+      lightboxImage.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        return false;
+      });
+      lightboxImage.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+        return false;
+      });
+    }
   }
 
   /**
-   * Open lightbox at specific index
+   * Open lightbox with specific photo
+   * @param {Object} photo - The photo object to open
+   * @param {string} filter - Current filter category
    */
-  function open(index, filter = 'all') {
+  function open(photo, filter = 'all') {
     if (typeof PHOTOS === 'undefined') return;
 
     currentFilter = filter;
+    // Filter photos by checking if categories array includes the filter
     filteredPhotos = filter === 'all'
       ? [...PHOTOS]
-      : PHOTOS.filter(p => p.category === filter);
+      : PHOTOS.filter(p => p.categories && p.categories.includes(filter));
 
-    // Find the actual index in filtered array
-    const photo = PHOTOS[index];
+    // Find the index of the clicked photo in the filtered array
     currentIndex = filteredPhotos.findIndex(p => p.src === photo.src);
     if (currentIndex === -1) currentIndex = 0;
 
@@ -205,7 +219,9 @@
 
       // Update info
       lightboxTitle.textContent = title;
-      lightboxMeta.textContent = `${photo.category} • ${getFilenameFromPath(photo.src)}`;
+      // Display all categories joined by "/"
+      const categoriesText = photo.categories ? photo.categories.join(' / ') : '';
+      lightboxMeta.textContent = `${categoriesText} • ${getFilenameFromPath(photo.src)}`;
 
       // Animate in
       requestAnimationFrame(() => {
@@ -296,9 +312,10 @@
    */
   function updateFilteredIndices(filter) {
     currentFilter = filter;
+    // Filter photos by checking if categories array includes the filter
     filteredPhotos = filter === 'all'
       ? [...PHOTOS]
-      : PHOTOS.filter(p => p.category === filter);
+      : PHOTOS.filter(p => p.categories && p.categories.includes(filter));
   }
 
   /**

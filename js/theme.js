@@ -199,6 +199,11 @@
       toggle.setAttribute('aria-expanded', isMenuOpen);
     }
 
+    // Update language buttons when panel opens
+    if (isMenuOpen && window.I18n) {
+      window.I18n.updateUI();
+    }
+
     // Menu visibility
     if (menu) {
       menu.classList.toggle('theme-panel__menu--open', isMenuOpen);

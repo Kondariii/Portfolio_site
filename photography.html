@@ -32,6 +32,14 @@
       document.documentElement.className = `theme-${config.theme} palette-${config.palette}`;
     })();
   </script>
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portfolio-language');
+      const lang = saved || 'en';
+      document.documentElement.lang = lang;
+    })();
+  </script>
 </head>
 <body>
 
@@ -39,10 +47,10 @@
     <div class="navbar__container">
       <a href="index.html" class="navbar__logo">Jakub Krzemiński</a>
       <div class="navbar__links" role="menubar">
-        <a href="photography.html" class="navbar__link" role="menuitem">Photography</a>
-        <a href="videography.html" class="navbar__link" role="menuitem">Videography</a>
-        <a href="about.html" class="navbar__link" role="menuitem">About</a>
-        <a href="contact.html" class="navbar__link" role="menuitem">Contact</a>
+        <a href="photography.html" class="navbar__link" role="menuitem" data-i18n="nav.photography">Photography</a>
+        <a href="videography.html" class="navbar__link" role="menuitem" data-i18n="nav.videography">Videography</a>
+        <a href="about.html" class="navbar__link" role="menuitem" data-i18n="nav.about">About</a>
+        <a href="contact.html" class="navbar__link" role="menuitem" data-i18n="nav.contact">Contact</a>
       </div>
       <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span class="navbar__hamburger-line"></span>
@@ -92,12 +100,20 @@
           Architecture
           <span class="filter-tab__underline"></span>
         </button>
-        <button class="filter-tab" data-filter="documentary">
-          Documentary
+        <button class="filter-tab" data-filter="nature">
+          Nature
+          <span class="filter-tab__underline"></span>
+        </button>
+        <button class="filter-tab" data-filter="architecture">
+          Architecture
           <span class="filter-tab__underline"></span>
         </button>
         <button class="filter-tab" data-filter="product">
           Product
+          <span class="filter-tab__underline"></span>
+        </button>
+        <button class="filter-tab" data-filter="cars">
+          Cars
           <span class="filter-tab__underline"></span>
         </button>
       </div>
@@ -199,6 +215,7 @@
   </div>
 
   <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/lightbox.js"></script>
