@@ -24,10 +24,16 @@ const PHOTOS = [
     featured: true
   },
   {
-    src: "photos/product/DSC00653.jpg",
-    categories: ["product"],
-    title: "B&W Watch - alt",
-    featured: true
+    src: "photos/street/DSC00689.jpg",
+    categories: ["street"],
+    title: "Street scene",
+    featured: false
+  },
+     {
+    src: "photos/street/DSC00710.jpg",
+    categories: ["street"],
+    title: "Take it easy",
+    featured: false
   },
   {
     src: "photos/product/DSC00648.jpg",
@@ -39,8 +45,66 @@ const PHOTOS = [
     src: "photos/product/DSC00647.jpg",
     categories: ["product"],
     title: "Bracelet shot B",
+    featured: false
+  },
+  {
+    src: "photos/architecture/DSC00683.jpg",
+    categories: ["architecture"],
+    title: "",
     featured: true
   },
-
-
+  {
+    src: "photos/architecture/DSC00686.jpg",
+    categories: ["architecture"],
+    title: "",
+    featured: false
+  },
+  {
+    src: "photos/Cars/DSC00721_260412001328.png",
+    categories: ["cars"],
+    title: "Mate BMW",
+    featured: false
+  },
+  {
+    src: "photos/Cars/DSC00720_260412001727.png",
+    categories: ["cars"],
+    title: "BMW - alt",
+    featured: false
+  },
+  {
+    src: "photos/street/DSC00925.jpg",
+    categories: ["street"],
+    title: "Tram in the busy city",
+    featured: false
+  },
+  {
+    src: "photos/Cars/DSC00714_260412002203.png",
+    categories: ["cars"],
+    title: "BMW - alt 2",
+    featured: false
+  },
+  {
+    src: "photos/Nature/DSC00697.jpg",
+    categories: ["nature", "street"],
+    title: "Beautiful Dog",
+    featured: false
+  },
+  {
+    src: "photos/portrait/DSC00676.jpg",
+    categories: ["portrait", "street"],
+    title: "Portrait of a man riding a bike",
+    featured: false
+  },
+  {
+    src: "photos/portrait/DSC00695.jpg",
+    categories: ["portrait", "street"],
+    title: "Portrait of an elderly man B&W",
+    featured: true
+  },
+    {
+    src: "photos/product/DSC00653.jpg",
+    categories: ["product"],
+    title: "B&W Watch - alt",
+    featured: false
+  },
 ];
