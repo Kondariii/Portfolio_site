@@ -115,6 +115,13 @@
         return false;
       });
     });
+    requestAnimationFrame(() => {
+  galleryItems.forEach((item, index) => {
+    setTimeout(() => {
+      item.classList.add('is-visible');
+    }, index * 40); // stagger effect
+  });
+});
   }
 
   /**
@@ -251,34 +258,54 @@ function applyOrientation(item, img) {
   /**
    * Filter gallery items
    */
-  function filterGallery(category) {
+function filterGallery(category) {
+  const gallery = document.querySelector('.gallery');
+
+  // fade OUT gallery first
+  gallery.classList.add('is-changing');
+
+  setTimeout(() => {
     galleryItems.forEach(item => {
-      // Parse categories array from data attribute
       let itemCategories = [];
+
       try {
         itemCategories = JSON.parse(item.dataset.categories || '[]');
       } catch (e) {
-        // Fallback to single category for backward compatibility
         itemCategories = [item.dataset.category];
       }
-      // Check if photo has the selected category in its categories array
-      const shouldShow = category === 'all' || itemCategories.includes(category);
+
+      const shouldShow =
+        category === 'all' || itemCategories.includes(category);
 
       if (shouldShow) {
-        item.classList.remove('gallery__item--hidden');
         item.style.display = '';
+        item.classList.remove('is-hidden');
       } else {
-        item.classList.add('gallery__item--hidden');
         item.style.display = 'none';
+        item.classList.add('is-hidden');
       }
     });
 
-    // Update lightbox filtered indices
-    if (window.Lightbox) {
-      window.Lightbox.updateFilteredIndices(category);
-    }
-  }
+    // fade back in
+    requestAnimationFrame(() => {
+      gallery.classList.remove('is-changing');
 
+      // re-animate visible items
+      const visibleItems = galleryItems.filter(item =>
+        item.style.display !== 'none'
+      );
+
+      visibleItems.forEach((item, index) => {
+        item.classList.remove('is-visible');
+
+        setTimeout(() => {
+          item.classList.add('is-visible');
+        }, index * 30);
+      });
+    });
+
+  }, 250); // matches CSS transition
+}
   /**
    * Filter video items
    */

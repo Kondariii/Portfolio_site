@@ -160,6 +160,31 @@ margin: 0;
 .gallery__item--hidden {
 display: none;
 }
+.gallery {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+/* fade out state */
+.gallery.is-changing {
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(2px);
+}
+
+/* item animation base */
+.gallery__item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+/* visible state */
+.gallery__item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ============================================
 RESPONSIVE GALLERY
