@@ -197,9 +197,24 @@ column-count: 2;
 }
 
 @media (max-width: 640px) {
-.gallery {
-column-count: 1;
-}
+  .filter-tabs {
+    position: static;
+  }
+    .gallery {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .gallery__item {
+    width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .gallery__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
 /* ============================================
