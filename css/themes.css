@@ -123,8 +123,9 @@
 /* Palette Grid */
 .theme-panel__palettes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
+    
 }
 
 .theme-panel__palette-btn {
