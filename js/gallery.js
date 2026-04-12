@@ -48,7 +48,7 @@
   function renderGallery() {
     const gallery = document.querySelector('.gallery');
     if (!gallery) return;
-
+    
     // Get featured items for homepage
     const isHomePage = !document.querySelector('.gallery-filters');
     const itemsToRender = isHomePage
@@ -87,7 +87,7 @@
 
     // Store references for filtering
     galleryItems = Array.from(gallery.querySelectorAll('.gallery__item'));
-
+    detectImageOrientations(galleryItems);
     // Detect aspect ratios and set orientations after images load
     //detectImageOrientations(galleryItems);
 
@@ -121,7 +121,39 @@
    * Detect image aspect ratios and set orientation attributes
    * for proper masonry grid sizing
    */
+  function detectImageOrientations(items) {
+  items.forEach(item => {
+    const img = item.querySelector('img');
 
+    if (!img) return;
+
+    if (img.complete) {
+      applyOrientation(item, img);
+    } else {
+      img.addEventListener('load', () => {
+        applyOrientation(item, img);
+      });
+    }
+  });
+}
+
+function applyOrientation(item, img) {
+  const ratio = img.naturalWidth / img.naturalHeight;
+
+  item.classList.remove(
+    'gallery__item--vertical',
+    'gallery__item--horizontal',
+    'gallery__item--square'
+  );
+
+  if (ratio < 0.8) {
+    item.classList.add('gallery__item--vertical');
+  } else if (ratio > 1.2) {
+    item.classList.add('gallery__item--horizontal');
+  } else {
+    item.classList.add('gallery__item--square');
+  }
+}
 
   /**
    * Set orientation attribute based on aspect ratio

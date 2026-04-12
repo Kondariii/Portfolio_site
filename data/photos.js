@@ -35,10 +35,22 @@ const PHOTOS = [
     title: "Take it easy",
     featured: false
   },
+    {
+    src: "photos/architecture/DSC00683.jpg",
+    categories: ["architecture"],
+    title: "",
+    featured: true
+  },
   {
     src: "photos/product/DSC00648.jpg",
     categories: ["product"],
     title: "Bracelet shot A",
+    featured: false
+  },
+    {
+    src: "photos/Cars/DSC00714_260412002203.png",
+    categories: ["cars"],
+    title: "Audi",
     featured: false
   },
   {
@@ -46,12 +58,6 @@ const PHOTOS = [
     categories: ["product"],
     title: "Bracelet shot B",
     featured: false
-  },
-  {
-    src: "photos/architecture/DSC00683.jpg",
-    categories: ["architecture"],
-    title: "",
-    featured: true
   },
   {
     src: "photos/architecture/DSC00686.jpg",
@@ -75,12 +81,6 @@ const PHOTOS = [
     src: "photos/street/DSC00925.jpg",
     categories: ["street"],
     title: "Tram in the busy city",
-    featured: false
-  },
-  {
-    src: "photos/Cars/DSC00714_260412002203.png",
-    categories: ["cars"],
-    title: "BMW - alt 2",
     featured: false
   },
   {
