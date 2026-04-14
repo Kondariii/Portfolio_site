@@ -107,4 +107,10 @@ const PHOTOS = [
     title: "B&W Watch - alt",
     featured: false
   },
+  { 
+    src: "photos/street/DSC00821.jpg",
+    categories: ["street", "portrait"],
+    title: "Elderly couple",
+    featured: false
+  }
 ];
