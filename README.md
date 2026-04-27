@@ -181,33 +181,12 @@ Then update the Google Fonts link in each HTML `<head>`.
 
 ---
 
-## 📧 Contact Form
-
-The contact form uses a **mailto:** fallback by default (opens the user's email client).
-
-### To use Formspree (recommended):
-1. Sign up at [formspree.io](https://formspree.io)
-2. Create a new form
-3. In `contact.html`, find the form and replace:
-   - `action="mailto:..."` with `action="https://formspree.io/f/YOUR_FORM_ID"`
-   - `method="post"`
-   - Remove the `onsubmit` attribute
-   - Remove `enctype="text/plain"`
-
----
-
 ## 🌐 Browser Support
 
 - Chrome/Edge (latest)
 - Firefox (latest)
 - Safari (latest)
 - Mobile browsers (iOS Safari, Chrome Android)
-
----
-
-## 📄 License
-
-Free to use and modify for your own portfolio. Attribution appreciated but not required.
 
 ---
 
