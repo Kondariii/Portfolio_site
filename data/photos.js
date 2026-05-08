@@ -39,7 +39,7 @@ const PHOTOS = [
     src: "photos/architecture/DSC00683.jpg",
     categories: ["architecture"],
     title: "",
-    featured: true
+    featured: false
   },
   {
     src: "photos/product/DSC00648.jpg",
@@ -60,16 +60,16 @@ const PHOTOS = [
     featured: false
   },
   {
-    src: "photos/architecture/DSC00686.jpg",
-    categories: ["architecture"],
-    title: "",
-    featured: false
-  },
-  {
     src: "photos/Cars/DSC00721_260412001328.png",
     categories: ["cars"],
     title: "Mate BMW",
-    featured: false
+    featured: true
+  },
+    {
+    src: "photos/architecture/DSC00686.jpg",
+    categories: ["architecture"],
+    title: "",
+    featured: true
   },
   {
     src: "photos/Cars/DSC00720_260412001727.png",
@@ -93,13 +93,13 @@ const PHOTOS = [
     src: "photos/portrait/DSC00676.jpg",
     categories: ["portrait", "street"],
     title: "Portrait of a man riding a bike",
-    featured: false
+    featured: true
   },
   {
     src: "photos/portrait/DSC00695.jpg",
     categories: ["portrait", "street"],
     title: "Portrait of an elderly man B&W",
-    featured: true
+    featured: false
   },
     {
     src: "photos/product/DSC00653.jpg",
@@ -111,6 +111,18 @@ const PHOTOS = [
     src: "photos/street/DSC00821.jpg",
     categories: ["street", "portrait"],
     title: "Elderly couple",
+    featured: false
+  },
+  {
+    src: "photos/portrait/DSC02314.jpg",
+    categories: ["portrait"],
+    title: "Man playing football",
+    featured: false
+  },
+  {
+    src: "photos/portrait/DSC02316.jpg",
+    categories: ["portrait"],
+    title: "Man playing football v2",
     featured: false
   }
 ];
