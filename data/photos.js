@@ -124,5 +124,54 @@ const PHOTOS = [
     categories: ["portrait"],
     title: "Man playing football v2",
     featured: false
-  }
+  },
+  {
+    src: "photos/architecture/DSC02040.jpg",
+    categories: ["architecture"],
+    title: "How to make matcha",
+    featured: false
+  },
+  {
+    src: "photos/architecture/DSC02077.jpg",
+    categories: ["architecture"],
+    title: "cathedral top",
+    featured: false
+  },
+  {
+    src: "photos/architecture/DSC02117.jpg",
+    categories: ["architecture"],
+    title: "Building covered in vines",
+    featured: false
+  },
+  {
+    src: "photos/architecture/DSC02135.jpg",
+    categories: ["architecture"],
+    title: "Out of car window",
+    featured: false
+  },
+  {
+    src: "photos/portrait/DSC02080.jpg",
+    categories: ["portrait"],
+    title: "crowd of people on bridge club",
+    featured: false
+  },
+    {
+    src: "photos/portrait/DSC02119.jpg",
+    categories: ["street", "portrait"],
+    title: "DJ performing in a crowd",
+    featured: false
+  },
+  {
+    src: "photos/street/DSC02107.jpg",
+    categories: ["street"],
+    title: "artist sign",
+    featured: false
+  },
+    {
+    src: "photos/architecture/DSC02135.jpg",
+    categories: ["architecture"],
+    title: "Out of car window",
+    featured: false
+  },
+  
 ];
