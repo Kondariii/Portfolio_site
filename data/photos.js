@@ -173,11 +173,4 @@ const PHOTOS = [
     title: "artist sign",
     featured: false
   },
-    {
-    src: "photos/architecture/DSC02135.jpg",
-    categories: ["architecture"],
-    title: "Out of car window",
-    featured: false
-  },
-  
 ];
