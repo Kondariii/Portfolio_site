@@ -138,6 +138,12 @@ const PHOTOS = [
     featured: false
   },
   {
+    src: "photos/architecture/DSC02059.jpg",
+    categories: ["portrait", "street"],
+    title: "Crowd",
+    featured: false
+  },
+  {
     src: "photos/architecture/DSC02117.jpg",
     categories: ["architecture"],
     title: "Building covered in vines",
