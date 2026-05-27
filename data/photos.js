@@ -140,7 +140,7 @@ const PHOTOS = [
   {
     src: "photos/architecture/DSC02059.jpg",
     categories: ["portrait", "street"],
-    title: "Crowd",
+    title: "Crowd on a festival",
     featured: false
   },
   {
