@@ -134,7 +134,7 @@ const PHOTOS = [
   {
     src: "photos/architecture/DSC02077.jpg",
     categories: ["architecture"],
-    title: "cathedral top",
+    title: "Cathedral top",
     featured: false
   },
   {
@@ -158,7 +158,7 @@ const PHOTOS = [
   {
     src: "photos/portrait/DSC02080.jpg",
     categories: ["portrait"],
-    title: "crowd of people on bridge club",
+    title: "Crowd of people on bridge club",
     featured: false
   },
     {
@@ -170,7 +170,64 @@ const PHOTOS = [
   {
     src: "photos/street/DSC02107.jpg",
     categories: ["street"],
-    title: "artist sign",
+    title: "Artist sign",
     featured: false
   },
+  {
+    src: "photos/architecture/DSC04764.jpg",
+    categories: ["architecture"],
+    title: "Sculpture",
+    featured: false
+  },
+    {
+    src: "photos/landscape/DSC04526.jpg",
+    categories: ["landscape"],
+    title: "Tree",
+    featured: false
+  },
+  {
+    src: "photos/landscape/DSC04252.jpg",
+    categories: ["landscape", "street"],
+    title: "Sign",
+    featured: false
+  },
+  {
+    src: "photos/landscape/DSC04266.jpg",
+    categories: ["landscape"],
+    title: "Beach",
+    featured: false
+  },
+  {
+    src: "photos/landscape/DSC04514.jpg",
+    categories: ["landscape"],
+    title: "Sea entrance",
+    featured: false
+  },
+  {
+    src: "photos/landscape/DSC04539.jpg",
+    categories: ["landscape"],
+    title: "Sea line",
+    featured: false
+  },
+  {
+    src: "photos/landscape/DSC04985.jpg",
+    categories: ["landscape"],
+    title: "Falling star",
+    featured: false
+  },
+  {
+    src: "photos/landscape/DSC04464.jpg",
+    categories: ["landscape"],
+    title: "Sunset over the sea",
+    featured: false
+  },
+  {
+    src: "photos/landscape/DSC04762.jpg",
+    categories: ["landscape"],
+    title: "Cave in light",
+    featured: false
+  },
+  
+  
+
 ];
